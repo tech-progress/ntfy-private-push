@@ -1,0 +1,13 @@
+{
+  "directory": "ntfy-private-push",
+  "name": "ntfy private push",
+  "category": "Automation",
+  "description": "Private ntfy topics with scoped credentials and persistent replay.",
+  "icon": "https://raw.githubusercontent.com/binwiederhier/ntfy/v2.28.0/web/public/static/images/ntfy.png",
+  "origins": [
+    {
+      "name": "ntfy",
+      "url": "https://ntfy.sh/"
+    }
+  ]
+}

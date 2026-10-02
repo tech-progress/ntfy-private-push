@@ -1,0 +1,15 @@
+listen-http: ":8080"
+cache-file: /var/lib/ntfy/cache.db
+cache-duration: "24h"
+auth-file: /var/lib/ntfy/auth.db
+auth-default-access: deny-all
+behind-proxy: true
+enable-signup: false
+enable-login: true
+enable-reservations: false
+attachment-cache-dir: ""
+visitor-message-daily-limit: 250
+visitor-subscription-limit: 20
+visitor-request-limit-burst: 30
+visitor-request-limit-replenish: "5s"
+web-root: app

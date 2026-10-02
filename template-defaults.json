@@ -1,0 +1,11 @@
+{
+  "ntfy": {
+    "PORT": "8080",
+    "NTFY_BASE_URL": "https://${{ntfy.RAILWAY_PUBLIC_DOMAIN}}",
+    "NTFY_BOOTSTRAP_USER": "publisher",
+    "NTFY_BOOTSTRAP_PASSWORD": "${{secret(32, \"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\")}}",
+    "NTFY_TOPIC_PREFIX": "alerts-",
+    "NTFY_CACHE_DURATION": "24h",
+    "NTFY_MANAGER_INTERVAL": "1m"
+  }
+}

@@ -1,0 +1,23 @@
+services:
+  ntfy:
+    build: .
+    environment:
+      PORT: "8080"
+      NTFY_BASE_URL: ${NTFY_BASE_URL:-http://localhost:18101}
+      NTFY_BOOTSTRAP_USER: ${NTFY_BOOTSTRAP_USER:-publisher}
+      NTFY_BOOTSTRAP_PASSWORD: ${NTFY_BOOTSTRAP_PASSWORD:?Set NTFY_BOOTSTRAP_PASSWORD}
+      NTFY_TOPIC_PREFIX: ${NTFY_TOPIC_PREFIX:-alerts-}
+      NTFY_CACHE_DURATION: ${NTFY_CACHE_DURATION:-24h}
+      NTFY_MANAGER_INTERVAL: ${NTFY_MANAGER_INTERVAL:-1m}
+      NTFY_WEB_PUSH_PUBLIC_KEY: ${NTFY_WEB_PUSH_PUBLIC_KEY:-}
+      NTFY_WEB_PUSH_PRIVATE_KEY: ${NTFY_WEB_PUSH_PRIVATE_KEY:-}
+      NTFY_WEB_PUSH_EMAIL_ADDRESS: ${NTFY_WEB_PUSH_EMAIL_ADDRESS:-}
+    ports: ["127.0.0.1:${NTFY_HTTP_PORT:-18101}:8080"]
+    volumes: ["ntfy-data:/var/lib/ntfy"]
+    healthcheck:
+      test: [CMD, wget, -q, -O, /dev/null, "http://127.0.0.1:8080/v1/health"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+volumes:
+  ntfy-data:

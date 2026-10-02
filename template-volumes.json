@@ -1,0 +1,6 @@
+{
+  "ntfy": {
+    "mountPath": "/var/lib/ntfy",
+    "sizeMB": 5000
+  }
+}
