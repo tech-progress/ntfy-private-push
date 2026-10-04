@@ -18,4 +18,6 @@ ntfy is dual licensed Apache-2.0/GPLv2; the upstream Apache-2.0 option is the in
 
 ## Publication gate
 
+This is a finite source-recipe permission review. No concrete missing selected production grant or required attribution was identified in the reviewed source and retained material. It is not complete assembled-image redistribution clearance: upstream embedded browser assets, sounds, fonts and native container packages retain their separate obligations. The selected Apache text and attribution inventory are preserved, not rewritten as original MIT code. [SECURITY_REVIEW.md](SECURITY_REVIEW.md) separately records the bounded default-workflow exposure assessment; it is not legal certification.
+
 The owner's original-code MIT approval is recorded above. The tagged upstream README's Go/web/font/audio inventory is retained in THIRD_PARTY_NOTICES.md, and the complete selected Apache-2.0 license is supplied both in source and in the derived image. Unmodified base-image assets retain their individual terms; notification audio is not separately sold or relicensed. VAPID/browser push and external mobile relays are not part of the default qualified private HTTP publish/subscribe core. No security certification or provider entitlement is claimed.

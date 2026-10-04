@@ -4,7 +4,7 @@
     "NTFY_BASE_URL": "Public HTTPS base URL, matching the Railway domain; required for links and browser push.",
     "NTFY_BOOTSTRAP_USER": "Non-admin user reconciled at startup; alphanumeric, dash and underscore only.",
     "NTFY_BOOTSTRAP_PASSWORD": "Generated 32-character password; persisted bcrypt credential is rotated on each startup.",
-    "NTFY_TOPIC_PREFIX": "Nonempty topic namespace; this user can read/write only topics matching prefix*.",
+    "NTFY_TOPIC_PREFIX": "Topic ACL grants prefix*; ntfy also allows the user's own private sync topic.",
     "NTFY_CACHE_DURATION": "Finite persistent message replay retention, default 24h; not indefinite delivery.",
     "NTFY_MANAGER_INTERVAL": "Message pruning and statistics cadence, default 1m; retention is enforced on this schedule."
   }

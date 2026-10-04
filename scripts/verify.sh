@@ -15,5 +15,7 @@ trap 'rm -f "${VERIFY_GRAPH}"' EXIT
 ./node_modules/.bin/railway-iac-ts .railway/railway.ts > "${VERIFY_GRAPH}"
 jq -e '.ok == true and (.diagnostics | all(.severity != "error"))' "${VERIFY_GRAPH}" >/dev/null
 python3 -m unittest discover -s tests
+node scripts/verify-docs.mjs
+node --test tests/docs.test.mjs
 
 echo "Local structural verification passed; remote publication gates remain pending."
